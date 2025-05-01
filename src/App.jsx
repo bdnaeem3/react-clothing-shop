@@ -1,10 +1,16 @@
+import { BrowserRouter, Routes, Route } from "react-router";
+
+import Homepage from "./pages/Home"
+import AboutPage from "./pages/About"
+
 function App() {
   return (
-    <>
-      <h1 class="text-3xl font-bold underline">
-        Hello world!
-      </h1>
-    </>
+    <BrowserRouter>
+      <Routes>
+        <Route index element={<Homepage />} />
+        <Route path="about" element={<AboutPage />} />
+      </Routes>
+    </BrowserRouter>
   )
 }
 
