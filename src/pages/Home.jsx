@@ -1,6 +1,11 @@
+// Sections
+import TopBar from "../sections/TopBar";
+
 const Homepage = props => {
     return (
-        'Homepage'
+        <>
+            <TopBar />
+        </>
     )
 }
 
