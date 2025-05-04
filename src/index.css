@@ -21,6 +21,11 @@ body {
   min-height: 100vh;
 }
 
+img {
+  max-width: 100%;
+  border: none;
+}
+
 ul {
   list-style: none;
 }
@@ -34,7 +39,7 @@ button:hover {
 }
 button:focus,
 button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
+  outline: none;
 }
 
 @media (prefers-color-scheme: light) {
@@ -46,7 +51,7 @@ button:focus-visible {
     color: #747bff;
   }
   button {
-    background-color: #f9f9f9;
+    /* background-color: #f9f9f9; */
   }
 }
 
