@@ -1,20 +1,10 @@
-import { useState } from "react"
 import { Button } from "../theme"
 
 const CartDropdown = props => {
     const { items = [], className = {}, onCheckoutClick, ...rest } = props
-    const [cartItems, setCartItems] = useState(items)
-
-    const onCartItemChange = (item) => {
-        // const newItems = cartItems.filter(i => {
-        //     return i.id != item.id
-        // })
-        // setCartItems(newItems)
-    }
 
     return (
         <div
-            id="hello"
             className={`absolute top-0 right-0 will-change-transform w-[350px] bg-white rounded shadow-[0_1px_4px_0_rgba(0,0,0,0.17)] z-[1000] border border-[rgba(0,0,0,0.15)] float-left min-w-[10rem] py-2 px-0 mt-[0.125rem] text-base text-[#212529] text-left ${className}`}
             style={{
                 transform: `translate3d(18px, 64px, 0px)`
@@ -23,7 +13,7 @@ const CartDropdown = props => {
             {...rest}
         >
             {
-                cartItems.map(item => {
+                items.map(item => {
                     return (
                         <div
                             className="flex items-center p-[10px] border-b border-b-[#f1f1f1]"
@@ -36,9 +26,6 @@ const CartDropdown = props => {
                                 </a>
                                 <p>{item.quantity} x {item.price} = {item.price * item.quantity}</p>
                             </div>
-                            <button type="button" className="mr-[10px] cursor-pointer" onClick={() => onCartItemChange(item)}>
-                                <img src="/public/modal-cross.svg" alt="" />
-                            </button>
                         </div>
                     )
                 })
