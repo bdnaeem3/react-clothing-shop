@@ -3,7 +3,7 @@ import { useEffect, useState, useRef } from "react"
 import { Container, Icon } from "../theme"
 import { CartDropdown, Logo } from "../components"
 
-import { cartItems } from "../data"
+import { cartItems } from "../../data"
 
 const Header = props => {
     const cartRef = useRef(null)
@@ -37,7 +37,7 @@ const Header = props => {
     }, [cartOpen]);
 
     return (
-        <section id="header">
+        <section id="header" className="bg-white">
             <Container>
                 <div className="relative py-[10px]">
                     <div className='flex justify-between items-center'>
@@ -65,7 +65,9 @@ const Header = props => {
                                         ref={buttonRef}
                                     >
                                         <Icon name="cart" height="18" width="16" />
-                                        <span className="absolute bg-[#d8407b] text-white w-[16px] h-[16px] leading-[16px] text-center rounded-full text-[0.625rem] font-bold top-[15px] right-[-10px]">2</span>
+                                        <span className="absolute bg-[#d8407b] text-white w-[16px] h-[16px] leading-[16px] text-center rounded-full text-[0.625rem] font-bold top-[15px] right-[-10px]">
+                                            {cartItems?.length}
+                                        </span>
                                     </button>
                                     {
                                         cartOpen &&
