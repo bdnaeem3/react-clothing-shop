@@ -2,6 +2,7 @@
 import Header from "../sections/Header";
 import TopBar from "../sections/TopBar";
 import Hero from "../sections/Hero";
+import Products from "../sections/Products";
 
 const Homepage = props => {
     return (
@@ -9,6 +10,7 @@ const Homepage = props => {
             <TopBar />
             <Header />
             <Hero />
+            <Products />
         </>
     )
 }
