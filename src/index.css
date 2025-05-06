@@ -37,6 +37,7 @@ a {
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: none;
@@ -47,12 +48,14 @@ button:focus-visible {
     color: #213547;
     background-color: #ffffff;
   }
+
   a:hover {
     color: #747bff;
   }
-  button {
-    /* background-color: #f9f9f9; */
-  }
+}
+
+.product-tags-icon:hover .product-tags {
+  display: block !important;
 }
 
 @import "tailwindcss";
