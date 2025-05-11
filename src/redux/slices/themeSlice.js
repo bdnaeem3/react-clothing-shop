@@ -1,21 +1,21 @@
 import { createSlice } from '@reduxjs/toolkit';
 
 const initialState = {
-  value: 0,
+  modalName: '',
 };
 
 const counterSlice = createSlice({
   name: 'counter',
   initialState: initialState,
   reducers: {
-    increment: (state) => {
-      state.value += 1;
+    showModal: (state, { payload }) => {
+      state.modalName = payload;
     },
-    decrement: (state) => {
-      state.value -= 1;
+    hideModal: (state) => {
+      state.modalName = '';
     },
   },
 });
 
-export const { increment, decrement } = counterSlice.actions;
+export const { showModal, hideModal } = counterSlice.actions;
 export default counterSlice.reducer;

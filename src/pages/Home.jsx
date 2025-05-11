@@ -1,21 +1,17 @@
+import RootLayout from "../layouts/RootLayout";
+
 // Sections
-import Header from "../sections/Header";
-import TopBar from "../sections/TopBar";
 import Hero from "../sections/Hero";
 import Products from "../sections/Products";
 import Newsletter from "../sections/Newsletter";
-import Footer from "../sections/Footer";
 
-const Homepage = props => {
+const Homepage = () => {
     return (
-        <>
-            <TopBar />
-            <Header />
+        <RootLayout>
             <Hero />
             <Products />
             <Newsletter />
-            <Footer/>
-        </>
+        </RootLayout>
     )
 }
 
