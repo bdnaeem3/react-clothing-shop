@@ -1,4 +1,5 @@
 import { useEffect, useState, useRef } from "react"
+import { NavLink } from "react-router";
 
 import { Container, Icon } from "../theme"
 import { CartDropdown, Logo } from "../components"
@@ -46,7 +47,13 @@ const Header = props => {
                         <nav className="main-menu">
                             <ul className="flex">
                                 <li className="relative ml-[50px]">
-                                    <a className="text-[#2b2e32] block py-[20px]" href="index.html">Products</a>
+                                    <NavLink
+                                        to="/products"
+                                        className={`text-[#2b2e32] block py-[20px] ${({ isActive }) => isActive ? "active" : ""}`}
+                                    >
+                                        Products
+                                    </NavLink>
+                                    {/* <a className="" href="index.html"></a> */}
                                 </li>
                                 <li className="ml-[50px]">
                                     <a className="text-[#2b2e32] block py-[20px] flex items-center" href="filter.html">
