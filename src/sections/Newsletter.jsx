@@ -1,7 +1,7 @@
 import { Container } from "../theme"
 
 const Newsletter = props => {
-    const { className = {}, ...rest } = props
+    const { className = "", ...rest } = props
 
     return (
         <section id="newsletter" className={`bg-white shadow-[0_4px_16px_0_rgba(0,0,0,0.04)] py-[15px] ${className}`} {...rest}>

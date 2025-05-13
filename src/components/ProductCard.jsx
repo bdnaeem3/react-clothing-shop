@@ -1,5 +1,5 @@
 const ProductCard = props => {
-    const { item, className = {}, cartHandler = () => { }, buyHandler = () => { }, ...rest } = props
+    const { item, className = "", cartHandler = () => { }, buyHandler = () => { }, ...rest } = props
 
     const onCartHandler = () => {
         console.log('clicked on cart');

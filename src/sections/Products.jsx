@@ -6,14 +6,15 @@ import { Container } from "../theme"
 import { ProductCard, SmartSearch } from "../components"
 
 import { products } from "../../data"
+import { SMART_SEARCH_MODAL } from "../constants"
 
 const Products = props => {
-    const { className = {}, ...rest } = props
+    const { className = "", ...rest } = props
 
     const dispatch = useDispatch()
 
     const smartSearchClickHandler = () => {
-        dispatch(showModal('SmartSearchModal'))
+        dispatch(showModal(SMART_SEARCH_MODAL))
     }
 
     return (

@@ -2,7 +2,7 @@ import { Logo } from "../components"
 import { Container } from "../theme"
 
 const Footer = props => {
-    const { className = {}, ...rest } = props
+    const { className = "", ...rest } = props
 
     return (
         <footer id="footer" className={`bg-[#fbfbfb] ${className}`} {...rest}>

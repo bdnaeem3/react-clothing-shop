@@ -1,7 +1,7 @@
 import { NavLink } from "react-router"
 
 const Logo = props => {
-    const { className = {}, link = '/', ...rest } = props
+    const { className = "", link = '/', ...rest } = props
 
     return (
         <NavLink to={link}>

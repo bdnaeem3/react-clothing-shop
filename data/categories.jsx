@@ -56,3 +56,5 @@ const categories = [
     { id: 36, name: 'black', parentId: 25 },
     { id: 37, name: 'blue', parentId: 25 }
 ];
+
+export default categories

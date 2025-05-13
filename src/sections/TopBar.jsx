@@ -4,7 +4,7 @@ import { Container } from '../theme'
 import Icon from '../theme/icons'
 
 const TopBar = props => {
-    const { className = {}, ...rest } = props
+    const { className = "", ...rest } = props
 
     return (
         <section id="top-bar" className={`bg-[#f5f5f5] py-[5px] ${className}`} {...rest}>

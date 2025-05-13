@@ -1,7 +1,7 @@
 import { Button } from "../theme"
 
 const CartDropdown = props => {
-    const { items = [], className = {}, onCheckoutClick, ...rest } = props
+    const { items = [], className = "", onCheckoutClick, ...rest } = props
 
     return (
         <div

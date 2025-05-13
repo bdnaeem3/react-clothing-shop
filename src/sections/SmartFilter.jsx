@@ -1,7 +1,7 @@
 import { Container } from "../theme"
 
 const SmartFilter = props => {
-    const { className = {}, ...rest } = props
+    const { className = "", ...rest } = props
 
     return (
         <section id="filter" className={`bg-[#ddd] py-[30px] mb-[20px] ${className}`} {...rest}>

@@ -4,8 +4,8 @@ const initialState = {
   modalName: '',
 };
 
-const counterSlice = createSlice({
-  name: 'counter',
+const themeSlice = createSlice({
+  name: 'theme',
   initialState: initialState,
   reducers: {
     showModal: (state, { payload }) => {
@@ -17,5 +17,5 @@ const counterSlice = createSlice({
   },
 });
 
-export const { showModal, hideModal } = counterSlice.actions;
-export default counterSlice.reducer;
+export const { showModal, hideModal } = themeSlice.actions;
+export default themeSlice.reducer;
