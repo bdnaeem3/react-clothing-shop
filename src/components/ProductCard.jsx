@@ -1,5 +1,5 @@
 const ProductCard = props => {
-    const { item, className = "", cartHandler = () => { }, buyHandler = () => { }, ...rest } = props
+    const { item, className = "", cartHandler = () => { }, buyHandler = () => { }, available, showAvailablity, ...rest } = props
 
     const onCartHandler = () => {
         console.log('clicked on cart');
@@ -21,14 +21,23 @@ const ProductCard = props => {
                 {item?.title}
             </a>
 
-            <h3 className="text-[1.3rem] font-bold text-right">
-                <strike className="text-[1.1rem] mr-[10px]">
+            <div className="flex items-center justify-between">
+                {
+                    showAvailablity &&
+                    available
+                    ? <p className="text-[green] font-bold">Available in stock</p>
+                    : <p className="text-[red] font-bold">Out in stock</p>
+                }
+
+                <h3 className="text-[1.3rem] font-bold text-right">
+                    <strike className="text-[1.1rem] mr-[10px]">
+                        {item.regularPrice}
+                        <span>৳</span>
+                    </strike>
                     {item.regularPrice}
-                    <span>৳</span>
-                </strike>
-                {item.regularPrice}
-                <span className="ml-[3px]">৳</span>
-            </h3>
+                    <span className="ml-[3px]">৳</span>
+                </h3>
+            </div>
 
             <div className="product-tags-icon group-hover:flex absolute top-[20px] right-[20px] hidden cursor-pointer">
                 <svg aria-hidden="true" focusable="false" data-prefix="fas" data-icon="tags" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 512" data-fa-i2svg="" width={20} height={16}><path fill="currentColor" d="M497.941 225.941L286.059 14.059A48 48 0 0 0 252.118 0H48C21.49 0 0 21.49 0 48v204.118a48 48 0 0 0 14.059 33.941l211.882 211.882c18.744 18.745 49.136 18.746 67.882 0l204.118-204.118c18.745-18.745 18.745-49.137 0-67.882zM112 160c-26.51 0-48-21.49-48-48s21.49-48 48-48 48 21.49 48 48-21.49 48-48 48zm513.941 133.823L421.823 497.941c-18.745 18.745-49.137 18.745-67.882 0l-.36-.36L527.64 323.522c16.999-16.999 26.36-39.6 26.36-63.64s-9.362-46.641-26.36-63.64L331.397 0h48.721a48 48 0 0 1 33.941 14.059l211.882 211.882c18.745 18.745 18.745 49.137 0 67.882z"></path></svg>
