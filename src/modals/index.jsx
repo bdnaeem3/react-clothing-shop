@@ -1,19 +1,16 @@
-import NewAddressModal from "./NewAddressModal"
-import SmartSearchModal from "./SmartSearchModal"
+import NewAddressModal from "./NewAddressModal";
+import SmartSearchModal from "./SmartSearchModal";
 
-import { SMART_SEARCH_MODAL, NEW_ADDRESS_MODAL } from "../constants"
+import { SMART_SEARCH_MODAL, NEW_ADDRESS_MODAL } from "../constants";
 
-const Modal = props => {
-    const { name, ...rest } = props
+const MODAL_COMPONENTS = {
+    [SMART_SEARCH_MODAL]: SmartSearchModal,
+    [NEW_ADDRESS_MODAL]: NewAddressModal,
+};
 
-    switch (name) {
-        case SMART_SEARCH_MODAL:
-            return <SmartSearchModal {...rest} />
-        case NEW_ADDRESS_MODAL:
-            return <NewAddressModal {...rest} />
-        default:
-            return null
-    }
-}
+const Modal = ({ name, ...rest }) => {
+    const ModalComponent = MODAL_COMPONENTS[name];
+    return ModalComponent ? <ModalComponent {...rest} /> : null;
+};
 
-export default Modal
+export default Modal;
